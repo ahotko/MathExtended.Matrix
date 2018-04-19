@@ -3,7 +3,7 @@ using System.Text;
 
 namespace Data.Annex.MathExtended.Matrices
 {
-    public class Matrix
+    public partial class Matrix
     {
         private double[,] _matrix;
 
