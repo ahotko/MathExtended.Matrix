@@ -33,6 +33,13 @@ namespace Data.Annex.MathExtended.Matrices
             return _result;
         }
 
+        public static Matrix Zero(int rows, int cols)
+        {
+            var _result = new Matrix(rows, cols);
+            _result.Zero();
+            return _result;
+        }
+
         public static Matrix Identity(int size)
         {
             var _result = new Matrix(size);

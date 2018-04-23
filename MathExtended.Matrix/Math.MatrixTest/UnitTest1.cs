@@ -118,6 +118,7 @@ namespace MathExtended.MatrixTest
             _trueResult[2, 3] = a[2, 3] + b[2, 3];
             #endregion
 
+
             var _calculatedResult = a + b;
 
             Assert.IsTrue(_calculatedResult == _trueResult, "Addition not correct!");
