@@ -7,7 +7,7 @@
     <ProjectGuid>{3E400F0D-5206-44B4-A36E-44CB1A4A5745}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Math.MatrixTest</RootNamespace>
+    <RootNamespace>Data.Annex.MathExtended.Matrices</RootNamespace>
     <AssemblyName>Math.MatrixTest</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
