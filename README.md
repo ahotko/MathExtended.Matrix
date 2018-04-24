@@ -4,7 +4,7 @@ C# Library for Matrices
 
 ## Legal information and credits
 
-MathExtended.Matrix is project by Ales Hotko and was first released in April 2018. It's licensed under the MIT license.
+ImageProcessing is project by Ales Hotko and was first released in April 2018. It's licensed under the MIT license.
 
 ## Usage
 
@@ -16,7 +16,7 @@ Matrix matrix = new Matrix(3);
 ```
 ##### Matrix of any size
 ```csharp
-//...or a matrix of any size (i.e. 5x3)
+//Create matrix of any size (i.e. 5x3)
 Matrix matrix = new Matrix(5, 3);
 ```
 ##### Zero Matrix
@@ -68,7 +68,7 @@ a.HadamardProduct(b);
 ```
 ##### Inversion
 ```csharp
-Matrix inverse = ~a;
+Matrix inverse = !a;
 //..or..
 a.Inverse();
 ```
