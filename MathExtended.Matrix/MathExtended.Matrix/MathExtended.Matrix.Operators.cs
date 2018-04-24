@@ -9,7 +9,7 @@ namespace Data.Annex.MathExtended.Matrices
     public partial class Matrix
     {
         #region Overloaded operators
-        public static Matrix operator ~(Matrix matrix)
+        public static Matrix operator !(Matrix matrix)
         {
             var result = matrix.Duplicate();
             result.Inverse();

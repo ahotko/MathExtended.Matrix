@@ -219,7 +219,7 @@ namespace MathExtended.MatrixTest
             _trueResult[3, 3] = 1;
             #endregion
 
-            var _calculatedResult = ~a;
+            var _calculatedResult = !a;
 
             Assert.IsTrue(_calculatedResult == _trueResult, "Inversion not correct!");
         }
