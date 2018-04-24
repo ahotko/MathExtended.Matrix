@@ -4,7 +4,7 @@ C# Library for Matrices
 
 ## Legal information and credits
 
-ImageProcessing is project by Ales Hotko and was first released in April 2018. It's licensed under the MIT license.
+*MathExtended.Matrix* is project by Ales Hotko and was first released in April 2018. It's licensed under the MIT license.
 
 ## Usage
 

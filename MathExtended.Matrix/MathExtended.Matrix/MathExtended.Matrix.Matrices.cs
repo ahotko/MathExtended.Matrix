@@ -46,5 +46,16 @@ namespace Data.Annex.MathExtended.Matrices
             _result.Identity();
             return _result;
         }
+
+        public static Matrix Vandermonde(int rows, int cols)
+        {
+            var _result = new Matrix(rows, cols);
+            for (int m = 1; m <= rows; m++)
+                for (int n = 1; n <= cols; n++)
+                {
+                    _result[m, n] = Math.Pow(m, n - 1);
+                }
+            return _result;
+        }
     }
 }

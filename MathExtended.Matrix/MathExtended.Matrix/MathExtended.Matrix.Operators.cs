@@ -23,6 +23,13 @@ namespace Data.Annex.MathExtended.Matrices
             return result;
         }
 
+        public static Matrix operator -(Matrix first, Matrix second)
+        {
+            var result = first.Duplicate();
+            result.Sub(second);
+            return result;
+        }
+
         public static Matrix operator *(Matrix first, Matrix second)
         {
             var result = first.Duplicate();

@@ -81,6 +81,17 @@ namespace Data.Annex.MathExtended.Matrices
                 }
         }
 
+        public void Sub(Matrix Matrix)
+        {
+            if (Rows != Matrix.Rows || Columns != Matrix.Columns)
+                throw new InvalidOperationException("Cannot sub matrices of different sizes.");
+            for (int _row = 0; _row < _matrix.GetLength(0); _row++)
+                for (int _col = 0; _col < _matrix.GetLength(1); _col++)
+                {
+                    _matrix[_row, _col] -= Matrix[_row + 1, _col + 1];
+                }
+        }
+
         public void Inverse()
         {
             if (Rows != Columns)
