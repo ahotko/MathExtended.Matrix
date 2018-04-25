@@ -51,6 +51,12 @@ Matrix sum = a + b;
 //..or..
 a.Add(b);
 ```
+##### Subtraction
+```csharp
+Matrix diff = a - b;
+//..or..
+a.Add(b);
+```
 ##### Multiplication
 ```csharp
 //multiplication with scalar
@@ -87,9 +93,9 @@ public double MyFunction(double param)
 	return param * 42.0;
 }
 
-[...]
+//[...]
 r.Map(MyFunction);
-[...]
+//[...]
 ```
 ### Comparing the matrices
 ```csharp
