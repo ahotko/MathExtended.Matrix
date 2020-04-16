@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="MathExtended.Matrix.cs" />
     <Compile Include="MathExtended.Matrix.Matrices.cs" />
+    <Compile Include="MathExtended.Matrix.Operations.cs" />
     <Compile Include="MathExtended.Matrix.Operators.cs" />
     <Compile Include="MathExtended.Matrix.Transformations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

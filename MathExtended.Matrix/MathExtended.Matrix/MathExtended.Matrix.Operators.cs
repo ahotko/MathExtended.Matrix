@@ -50,8 +50,7 @@ namespace Data.Annex.MathExtended.Matrices
 
         public static Boolean operator ==(Matrix first, Matrix second)
         {
-            bool result = false;
-            result = (first.Rows == second.Rows) && (first.Columns == second.Columns);
+            bool result = (first.Rows == second.Rows) && (first.Columns == second.Columns);
             if (result)
             {
                 for (int row = 1; row <= first.Rows; row++)
@@ -67,8 +66,7 @@ namespace Data.Annex.MathExtended.Matrices
 
         public static Boolean operator !=(Matrix first, Matrix second)
         {
-            bool result = false;
-            result = (first.Rows != second.Rows) || (first.Columns != second.Columns);
+            bool result = (first.Rows != second.Rows) || (first.Columns != second.Columns);
             if (!result)
             {
                 for (int row = 1; row <= first.Rows; row++)
@@ -109,8 +107,7 @@ namespace Data.Annex.MathExtended.Matrices
             {
                 return false;
             }
-            bool result = false;
-            result = (this.Rows == matrix.Rows) && (this.Columns == matrix.Columns);
+            bool result = (this.Rows == matrix.Rows) && (this.Columns == matrix.Columns);
             if (result)
             {
                 for (int row = 1; row <= this.Rows; row++)

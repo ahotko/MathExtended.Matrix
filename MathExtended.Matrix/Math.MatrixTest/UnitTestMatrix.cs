@@ -246,5 +246,15 @@ namespace MathExtended.MatrixTest
             a.Randomize();
             a.Map(Math.Sin);
         }
+
+        [TestMethod]
+        public void MatrixIsSquare()
+        {
+            Matrix a = new Matrix(3);
+            Matrix b = new Matrix(3, 5);
+
+            Assert.IsTrue(a.IsSquare, "Matrix A is square Matrix!");
+            Assert.IsFalse(b.IsSquare, "Matrix B is not square Matrix!");
+        }
     }
 }
