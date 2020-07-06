@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Data.Annex.MathExtended.Matrices
+namespace MathExtended.Matrices
 {
     public partial class Matrix
     {
@@ -91,19 +91,7 @@ namespace Data.Annex.MathExtended.Matrices
 
         public static Matrix Scaling(double factor)
         {
-            var _result = new Matrix(3);
-            _result[1, 1] = factor;
-            _result[1, 2] = 0.0;
-            _result[1, 3] = 0.0;
-            //
-            _result[2, 1] = 0.0;
-            _result[2, 2] = factor;
-            _result[2, 3] = 0.0;
-            //
-            _result[3, 1] = 0.0;
-            _result[3, 2] = 0.0;
-            _result[3, 3] = factor;
-            return _result;
+            return Scaling(factor, factor, factor);
         }
 
         public static Matrix Scaling(double factorX, double factorY, double factorZ)

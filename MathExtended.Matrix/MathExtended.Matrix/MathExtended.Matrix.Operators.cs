@@ -1,11 +1,18 @@
 ﻿using System;
 using System.Text;
 
-namespace Data.Annex.MathExtended.Matrices
+namespace MathExtended.Matrices
 {
     public partial class Matrix
     {
         #region Overloaded operators
+        public static Matrix operator ~(Matrix matrix)
+        {
+            var result = matrix.Duplicate();
+            result.Transpose();
+            return result;
+        }
+
         public static Matrix operator !(Matrix matrix)
         {
             var result = matrix.Duplicate();

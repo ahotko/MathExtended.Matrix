@@ -1,6 +1,6 @@
-﻿using System;
+﻿using MathExtended.Matrices;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Data.Annex.MathExtended.Matrices;
+using System;
 
 namespace MathExtended.MatrixTest
 {
@@ -48,6 +48,33 @@ namespace MathExtended.MatrixTest
 
             Assert.IsTrue(a == b, "Matrices A and B are equal!");
             Assert.IsFalse(a == c, "Matrices A and C are not equal!");
+        }
+
+        [TestMethod]
+        public void MatrixTranspose()
+        {
+            Matrix a = new Matrix(3, 2);
+            Matrix transposed = new Matrix(2, 3);
+
+            #region Matrix definition
+            a[1, 1] = 1;
+            a[1, 2] = 2;
+            a[2, 1] = 3;
+            a[2, 2] = 4;
+            a[3, 1] = 5;
+            a[3, 2] = 6;
+
+            transposed[1, 1] = 1;
+            transposed[1, 2] = 3;
+            transposed[1, 3] = 5;
+            transposed[2, 1] = 2;
+            transposed[2, 2] = 4;
+            transposed[2, 3] = 6;
+            #endregion
+
+            a.Transpose();
+
+            Assert.IsTrue(a == transposed, "Matrices A and B are equal!");
         }
 
         [TestMethod]

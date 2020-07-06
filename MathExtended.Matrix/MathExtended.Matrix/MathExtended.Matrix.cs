@@ -1,7 +1,9 @@
-﻿using System;
+﻿using System.Diagnostics;
+using System.Text;
 
-namespace Data.Annex.MathExtended.Matrices
+namespace MathExtended.Matrices
 {
+    [DebuggerDisplay("Matrix = {ToString()}")]
     public partial class Matrix
     {
         private double[,] _matrix;
@@ -35,5 +37,21 @@ namespace Data.Annex.MathExtended.Matrices
         /// <param name="m"></param>
         public Matrix(int m) : this(m, m) { }
 
-     }
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.Append("[");
+            for (int row = 0; row < Rows; row++)
+            {
+                for (int col = 0; col < Columns; col++)
+                {
+                    sb.Append($"{_matrix[row, col]:N2}").Append(" ");
+                }
+                sb.Append(";");
+            }
+            sb.Append("]");
+            return sb.ToString();
+        }
+
+    }
 }

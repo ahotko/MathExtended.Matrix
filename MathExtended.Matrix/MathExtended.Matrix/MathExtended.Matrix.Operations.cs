@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Data.Annex.MathExtended.Matrices
+namespace MathExtended.Matrices
 {
     public partial class Matrix
     {

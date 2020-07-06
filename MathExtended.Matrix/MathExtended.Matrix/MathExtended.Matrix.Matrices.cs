@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Data.Annex.MathExtended.Matrices
+namespace MathExtended.Matrices
 {
     public partial class Matrix
     {
@@ -15,7 +15,7 @@ namespace Data.Annex.MathExtended.Matrices
 
         private void Identity()
         {
-            if (Rows != Columns)
+            if (!IsSquare)
                 throw new InvalidOperationException("Identity matrix must be square.");
             Zero();
             for (int n = 0; n < Rows; n++)
