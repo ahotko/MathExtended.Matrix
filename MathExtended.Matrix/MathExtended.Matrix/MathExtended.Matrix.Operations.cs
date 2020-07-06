@@ -66,38 +66,38 @@ namespace MathExtended.Matrices
         {
             if (!IsSquare)
                 throw new InvalidOperationException("Only square matrices can be inverted.");
-            int _dimension = Rows;
-            var _result = _matrix.Clone() as double[,];
-            var _identity = _matrix.Clone() as double[,];
+            int dimension = Rows;
+            var result = _matrix.Clone() as double[,];
+            var identity = _matrix.Clone() as double[,];
             //make identity matrix
-            for (int _row = 0; _row < _dimension; _row++)
-                for (int _col = 0; _col < _dimension; _col++)
+            for (int _row = 0; _row < dimension; _row++)
+                for (int _col = 0; _col < dimension; _col++)
                 {
-                    _identity[_row, _col] = (_row == _col) ? 1.0 : 0.0;
+                    identity[_row, _col] = (_row == _col) ? 1.0 : 0.0;
                 }
             //invert
-            for (int i = 0; i < _dimension; i++)
+            for (int i = 0; i < dimension; i++)
             {
-                double _tmp = _result[i, i];
-                for (int j = 0; j < _dimension; j++)
+                double temporary = result[i, i];
+                for (int j = 0; j < dimension; j++)
                 {
-                    _result[i, j] = _result[i, j] / _tmp;
-                    _identity[i, j] = _identity[i, j] / _tmp;
+                    result[i, j] = result[i, j] / temporary;
+                    identity[i, j] = identity[i, j] / temporary;
                 }
-                for (int k = 0; k < _dimension; k++)
+                for (int k = 0; k < dimension; k++)
                 {
                     if (i != k)
                     {
-                        _tmp = _result[k, i];
-                        for (int n = 0; n < _dimension; n++)
+                        temporary = result[k, i];
+                        for (int n = 0; n < dimension; n++)
                         {
-                            _result[k, n] = _result[k, n] - _tmp * _result[i, n];
-                            _identity[k, n] = _identity[k, n] - _tmp * _identity[i, n];
+                            result[k, n] = result[k, n] - temporary * result[i, n];
+                            identity[k, n] = identity[k, n] - temporary * identity[i, n];
                         }
                     }
                 }
             }
-            _matrix = _identity;
+            _matrix = identity;
         }
 
         public void Transpose()
